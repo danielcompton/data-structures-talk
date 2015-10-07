@@ -6,6 +6,13 @@ A Clojure library designed to ... well, that part is up to you.
 
 FIXME
 
+
+Run the tests with
+
+```
+lein test-refresh
+```
+
 ## License
 
 Copyright © 2015 FIXME
