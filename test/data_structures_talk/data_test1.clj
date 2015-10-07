@@ -1,6 +1,8 @@
 (ns data-structures-talk.data-test1
   (:require [clojure.test :refer :all]))
 
+;; Task: replace the ? with the correct answer to make all of the tests pass.
+
 (def ? nil)
 
 (deftest get-test
