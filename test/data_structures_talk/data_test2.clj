@@ -50,8 +50,8 @@
   (is (= ? (pop [1 2 3 4])))
   (is (= ? (pop '(1 2 3 4))))
 
-  ;; Task: why can we call first on a map, but not peek? What happens if you try this:
-  ;; (peek {:a 1})
+  ;; Task: why can we call first on a map, but not peek?
+  ;; What happens if you try this? (peek {:a 1})
 
   ;; N.B. you might need to do some Google searching to fully understand this one
   (is (= ? (-> (PersistentQueue/EMPTY)
@@ -83,5 +83,6 @@
 
 ;; dissoc
 ;; disj
+;; merge
 
 ;; building data structures with functions

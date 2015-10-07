@@ -1,9 +1,9 @@
 (ns data-structures-talk.data-test1
   (:require [clojure.test :refer :all]))
 
-;; Task: replace the ? with the correct answer to make all of the tests pass.
-
 (def ? nil)
+
+;; Task: in the deftests below, replace the ? with the correct answer to make all of the tests pass.
 
 (deftest get-test
   (testing "different ways to get maps"
@@ -28,7 +28,7 @@
     (is (= ? (:a #{:a :b :c})))))
 
 (deftest get-in-test
-  (is (= ? (get-in {:a {:b {:c "x"}}} [:a :b :c])))
+  (is (= "" (get-in {:a {:b {:c "x"}}} ?)))
   (is (= ? (get-in [0 1 {:x 3}] [2 :x]))))
 
 (deftest conj-test
