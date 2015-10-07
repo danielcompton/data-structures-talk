@@ -28,23 +28,23 @@
     (is (= ? (:a #{:a :b :c})))))
 
 (deftest get-in-test
-  (is (= "" (get-in {:a {:b {:c "x"}}} ?)))
+  (is (= "" (get-in {:a {:b {:c "x"}}} ?)))                 ;; the ? is at the end
   (is (= ? (get-in [0 1 {:x 3}] [2 :x]))))
 
 (deftest conj-test
-  (is (= {:a 1 :b 2} (conj {:a 1} ?)))
+  (is (= {:a 1 :b 2} (conj {:a 1} ?)))                      ;; the ? is at the end
   (is (= {:a 1 :b 2 :c 3} (conj {:a 1} ? ?)))
 
-  (is (= [] (conj [:x :y :z] :a)))
-  (is (= [] (conj [:x :y :z] :a :b :c)))
+  (is (= ? (conj [:x :y :z] :a)))
+  (is (= ? (conj [:x :y :z] :a :b :c)))
 
-  (is (= #{} (conj #{:a :b :c} :d)))
-  (is (= #{} (conj #{:a :b :c} :d :a :b)))
+  (is (= ? (conj #{:a :b :c} :d)))
+  (is (= ? (conj #{:a :b :c} :d :a :b)))
 
-  (is (= '() (conj '(:a :b :c) :d)))
-  (is (= '() (conj '(:a :b :c) :d :e :f)))
+  (is (= ? (conj '(:a :b :c) :d)))
+  (is (= ? (conj '(:a :b :c) :d :e :f)))
 
-  (is (= [] (conj nil :a))))
+  (is (= ? (conj nil :a))))
 
 (deftest cons-test
   (is (= ? (cons :x [:a :b :c])))
