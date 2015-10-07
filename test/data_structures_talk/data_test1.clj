@@ -15,7 +15,7 @@
     (is (= ? (get [:a :b :c :d] 2)))
     (is (= ? (get [] 2)))
     (is (= ? ([:a :b :c :d] 3)))
-    (is (= ? ([:a] 2)))                                     ;; hint: thrown? might be helpful here
+    (is (= ? ([:a] 2)))                                     ;; hint: clojure.test/thrown? might be helpful here
     (is (= ? (nth [:a :b :c :d] 3)))
     (is (= ? (nth [:a :b :c :d] 23 :no))))
 
@@ -47,7 +47,7 @@
 (deftest cons-test
   (is (= ? (cons :x [:a :b :c])))
   (is (= ? (cons :x '(:a :b :c))))
-  ;; explain why these two are the same.
+  ;; Task: explain why these two return the same result.
   )
 
 (deftest assoc-test

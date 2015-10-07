@@ -50,10 +50,10 @@
   (is (= ? (pop [1 2 3 4])))
   (is (= ? (pop '(1 2 3 4))))
 
-  ;; why can we call first on a map, but not peek? What happens if you try this:
+  ;; Task: why can we call first on a map, but not peek? What happens if you try this:
   ;; (peek {:a 1})
 
-  ;; you might need to do some Google searching to understand this one
+  ;; N.B. you might need to do some Google searching to fully understand this one
   (is (= ? (-> (PersistentQueue/EMPTY)
                (conj :a)
                (conj :b)
@@ -75,9 +75,9 @@
   (is (= ? (reverse (list 1 2 3 4))))
   (is (= ? (reverse (reverse [:a :b :c]))))
 
-  ;; what's the difference between reverse and rseq?
+  ;; Task: explain the difference between reverse and rseq?
   (is (= ? (rseq [:a :b :c :d])))
-  ;; why can't we call rseq on a normal map?
+  ;; Task: explain why can't we call rseq on a normal map?
   (is (= ? (rseq (sorted-map :a 1 :b 2 :c 3))))
   )
 
