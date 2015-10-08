@@ -75,10 +75,12 @@
   (is (= ? (reverse (list 1 2 3 4))))
   (is (= ? (reverse (reverse [:a :b :c]))))
 
-  ;; Task: explain the difference between reverse and rseq?
   (is (= ? (rseq [:a :b :c :d])))
-  ;; Task: explain why can't we call rseq on a normal map?
   (is (= ? (rseq (sorted-map :a 1 :b 2 :c 3))))
+  ;; Task: explain the difference between reverse and rseq?
+  ;; Task: explain why can't we call rseq on a normal map?
+  ;; hint: look at the type hints for rseq, and which which interfaces PersistentTreeMap implements
+  ;; What happens if you try this? (rseq {:a 1})
   )
 
 ;; dissoc
